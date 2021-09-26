@@ -12,7 +12,7 @@ pip install -r .\requirements.txt
 在当前目录执行脚本
 
 ```
-hohup python .\logintask.py &
+nohup python .\logintask.py &
 ```
 
 默认一小时登录一次

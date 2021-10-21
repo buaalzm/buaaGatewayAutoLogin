@@ -1,9 +1,7 @@
 from loguru import logger
 from apscheduler.schedulers.blocking import BlockingScheduler
-from pathlib import Path
 from BeihangLogin.srun4k import *
 from config import *
-import os
 
 
 def login_task():

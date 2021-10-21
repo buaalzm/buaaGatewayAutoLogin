@@ -7,7 +7,7 @@
 pip install -r .\requirements.txt
 ```
 
-修改`BeihangLogin\login.sh`中的`username`和`pwd`
+修改`config.py`中的`USERNAME`和`PASSWORD`
 
 在当前目录执行脚本
 

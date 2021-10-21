@@ -88,7 +88,7 @@ def do_logout(url,username):
 		ret = {
 			'success':True,
 		}
-		return ret;
+		return ret
 	elif ('login_error' in r.text):
 		ret = {
 			'success':False,

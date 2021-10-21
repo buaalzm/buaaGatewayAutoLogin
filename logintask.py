@@ -1,13 +1,18 @@
 from loguru import logger
 from apscheduler.schedulers.blocking import BlockingScheduler
 from pathlib import Path
+from BeihangLogin.srun4k import *
+from config import *
 import os
 
 
 def login_task():
     logger.info("login")
-    log_shell_path = Path.cwd() / "BeihangLogin" / "login.sh"
-    os.system("sh {}".format(str(log_shell_path)))
+    ret = do_login(gatewayUrl, USERNAME, PASSWORD)
+    if ret['success']:
+        logger.info('成功！')
+    else:
+        logger.warning('失败！\n' + ret['reason'])
 
 
 if __name__ == "__main__":
